@@ -28,7 +28,7 @@ Go
 
 gonative
 
- * Required if host is not Linux
+ * Required only if host is not Linux
  * Recommend [https://github.com/calmh/gonative]() fork
  * `go get github.com/calmh/gonative && gonative -version=1.3 -platforms="linux_amd64"`
 
