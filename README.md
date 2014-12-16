@@ -250,3 +250,4 @@ for a systemd unit that starts the Go webapp on boot:
 
   * [http://serverfault.com/a/479437]()
 
+Most of **Vagrantfile** comes from `vagrant init`.
