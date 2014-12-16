@@ -5,6 +5,8 @@ app/bin/*
 builds/*
 !builds/README.md
 
+.galaxy_install_info
+
 go/
 
 packer_cache/
