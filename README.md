@@ -162,8 +162,8 @@ Upon **failure**: returns 1 and STDOUT (or perhaps STDERR; presently unknown):
 Destroy
 --------
 
-When you're done with the VM, remove it from VirtualBox and associated files
-from your system. Remember to remove Vagrant's cached .box.
+When you're done with the VM, remove the VM and associated files. Remember to
+remove Vagrant's cached .box.
 
     $ vagrant destroy
     $ rm -rf ~/.vagrant.d/boxes/builds-*-fileserver-centos70-x86_64.box
