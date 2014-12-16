@@ -56,10 +56,10 @@ Vagrant
 Synopsis
 ---------
 
-    $ # *Build on Linux*:
+    $ # *Build on Linux host*:
     $ go build -o app/bin/fileserver-linux app/src/main.go
     
-    $ # *Build on OS X*:
+    $ # *Build on OS X, Windows, or any other non-Linux host*:
     $   # First install gonative (see Build Go Binary below)
     $   # Then you can target linux/amd64:
     $ GOOS=linux GOARCH=amd64 go/bin/go build -o app/bin/fileserver-linux app/src/main.go
