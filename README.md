@@ -238,7 +238,7 @@ iso/ directory.
 Acknowledgements
 ==================
 
-[geerlingguy on Github](https://github.com/geerlingguy) for an example Packer
+[Jeff Geerling on Github](https://github.com/geerlingguy) for an example Packer
 setup for a minimal CentOS 7 Vagrant box provisioned with Ansible
 
   * [https://github.com/geerlingguy/packer-centos-7]()
