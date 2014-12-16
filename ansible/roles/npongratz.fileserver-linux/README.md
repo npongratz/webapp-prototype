@@ -1,6 +1,6 @@
-# Ansible Role: Packer RHEL/CentOS Configuration for Vagrant VirtualBox
+# Ansible Role: run fileserver-linux on startup
 
-This role configures RHEL/CentOS to start whatever is in /tmp/bin on bootup.
+This role ensures fileserver-linux is running upon startup (in theory). TODO: see if this is true.
 
 Based on geerlingguy.packer-rhel
 
@@ -18,7 +18,7 @@ Prior to running this role via Packer, you need to make sure Ansible is installe
         "type": "ansible-local",
         "playbook_file": "ansible/main.yml",
         "role_paths": [
-          "/Users/jgeerling/Dropbox/VMs/roles/geerlingguy.packer-rhel",
+          "ansible/roles/npongratz.fileserver-linux",
         ]
       }
     ],
@@ -28,8 +28,9 @@ The files should contain, at a minimum:
 **scripts/ansible.sh**:
 
     #!/bin/bash -eux
-    # Add the EPEL repository, and install Ansible.
-    rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    # Install EPEL repository.
+    yum -y install epel-release
+    # Install Ansible.
     yum -y install ansible python-setuptools
 
 **ansible/main.yml**:
@@ -39,7 +40,7 @@ The files should contain, at a minimum:
       sudo: yes
       gather_facts: yes
       roles:
-        - geerlingguy.packer-rhel
+        - npongratz.fileserver-linux
 
 You might also want to add another shell provisioner to run cleanup, erasing free space using `dd`, but this is not required (it will just save a little disk space in the Packer-produced .box file).
 
@@ -57,7 +58,7 @@ None.
 
     - hosts: all
       roles:
-        - { role: npongratz.fileserver-rhel }
+        - { role: npongratz.fileserver-linux }
 
 ## License
 
@@ -65,4 +66,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Nick Pongratz](mailto:nick.pongratz@cdw.com/)
+This role was created in 2014 by [Nick Pongratz](https://github.com/npongratz), based on [Jeff Geerling](https://github.com/geerlingguy)'s [ansible-role-packer-rhel](https://github.com/geerlingguy/ansible-role-packer-rhel).
