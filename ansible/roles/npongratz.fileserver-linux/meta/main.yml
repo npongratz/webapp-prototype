@@ -1,0 +1,17 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: npongratz
+  description: RedHat/CentOS configuration for fileserver.
+  company: "CDW"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.4
+  platforms:
+  - name: EL
+    versions:
+    - 6
+    - 7
+  categories:
+    - development
+    - web

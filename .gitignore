@@ -1,0 +1,12 @@
+*.iso
+
+app/bin/*
+
+builds/*
+!builds/README.md
+
+go/
+
+packer_cache/
+
+.vagrant/

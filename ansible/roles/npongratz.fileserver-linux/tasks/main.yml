@@ -1,0 +1,3 @@
+---
+- name: Ensure Go web server is started
+  service: name=fileserver-linux pattern=/tmp/fileserver-linux state=started

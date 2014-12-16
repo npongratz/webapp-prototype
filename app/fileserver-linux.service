@@ -1,0 +1,11 @@
+[Unit]
+Description=HTTP fileserver written in Go
+
+[Service]
+User=vagrant
+Group=vagrant
+WorkingDirectory=/srv/share
+ExecStart=/tmp/fileserver-linux
+
+[Install]
+WantedBy=multi-user.target
