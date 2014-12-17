@@ -5,6 +5,7 @@ app/bin/*
 builds/*
 !builds/README.md
 
+.DS_Store
 .galaxy_install_info
 
 go/
