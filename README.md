@@ -71,7 +71,7 @@ Synopsis
     $   # Then you can target linux/amd64:
     $ GOOS=linux GOARCH=amd64 go/bin/go build -o app/bin/fileserver-linux app/src/main.go
     
-    $ packer build Packerfile-fileserver-centos70-x86_64.json
+    $ packer build Packerfile-centos70-x86_64.json
     $ vagrant up
     $ curl localhost:8080/hello.txt
 
@@ -117,10 +117,10 @@ Build VM
 ---------
 
     $ # Remove old Vagrant crap:
-    $ rm -rf ~/.vagrant.d/boxes/builds-*-fileserver-centos70-x86_64.box
+    $ rm -rf ~/.vagrant.d/boxes/builds-*-centos70-x86_64.box
 
     $ # Use Packer-Ansible-Vagrant stack to build and package for VirtualBox:
-    $ packer build Packerfile-fileserver-centos70-x86_64.json
+    $ packer build Packerfile-centos70-x86_64.json
 
 ### Notes:
 
@@ -173,7 +173,7 @@ When you're done with the VM, remove the VM and associated files. Remember to
 remove Vagrant's cached .box.
 
     $ vagrant destroy
-    $ rm -rf ~/.vagrant.d/boxes/builds-*-fileserver-centos70-x86_64.box
+    $ rm -rf ~/.vagrant.d/boxes/builds-*-centos70-x86_64.box
 
 
 More information
