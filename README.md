@@ -294,6 +294,12 @@ http://isoredirect.centos.org/centos/7/isos/x86_64/
 An alternative option is to download the .iso yourself and place it in the 
 iso/ directory.
 
+### Q: How can I use this prototype to deploy my own Go source to a VM? ###
+
+A: Download the ZIP of this repo (or click Download ZIP button above). Extract
+to a local directory. Edit the source in app/src. Follow **Synopsis** for
+further instructions to build binary and VM.
+
 
 Acknowledgements
 ==================
