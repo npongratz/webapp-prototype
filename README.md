@@ -177,6 +177,8 @@ More information
 
 Packer
 -------
+Creates a machine image as a build artifact.
+
 Packer downloads the CentOS ISO (CentOS-7.0-1406-x86_64-Minimal.iso) and:
 
   1. Boots it with VirtualBox
