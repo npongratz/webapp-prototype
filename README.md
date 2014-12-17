@@ -295,7 +295,7 @@ Acknowledgements
 ==================
 
 [Jeff Geerling on Github](https://github.com/geerlingguy) for an example Packer
-setup for a minimal CentOS 7 Vagrant box provisioned with Ansible
+setup for a minimal CentOS 7 Vagrant box provisioned with Ansible:
 
   * [https://github.com/geerlingguy/packer-centos-7]()
   * [https://github.com/geerlingguy/ansible-role-packer-rhel]()
