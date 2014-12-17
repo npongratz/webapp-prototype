@@ -210,10 +210,10 @@ Vagrant
 --------
 
 Packer uses [Vagrant for post-processing](https://packer.io/docs/post-processors/vagrant.html)
-to create the VirtualBox .box artifact.
+to convert the Packer build to a VirtualBox .box artifact.
 
-You can then use Vagrant for easy manipulation of the VM as you bring it up:
-`vagrant up`, `vagrant halt`, `vagrant destroy`, etc.
+You can then use Vagrant on your host for easy manipulation of the VM as you bring
+it up: `vagrant up`, `vagrant halt`, `vagrant destroy`, etc.
 
 You can also configure the VM before bringing it up. For instance, change the
 forwarded port by editing `config.vm.network` in **Vagrantfile**.
