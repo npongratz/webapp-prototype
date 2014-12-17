@@ -273,7 +273,7 @@ forwarded port by editing `config.vm.network` in **Vagrantfile**.
 Questions and answers
 ======================
 
-### Q: Why remove Vagrant's cached .box? ###
+### Q: Why must I manually remove Vagrant's cached .box? ###
 
 A: For some reason, .box files were not being overwritten by Packer/Vagrant as
 expected. So just remove the .box, and save yourself many hours of
