@@ -194,8 +194,8 @@ Ansible
 
 We are using the following roles:
 
-  * geerlingguy.nfs
-  * geerlingguy.packer-rhel
+  * [geerlingguy.nfs](https://github.com/geerlingguy/ansible-role-nfs)
+  * [geerlingguy.packer-rhel](https://github.com/geerlingguy/ansible-role-packer-rhel)
   * npongratz.fileserver-linux
 
 geerlingguy.nfs sets up NFS on the VM, presumably for file sharing.
@@ -209,8 +209,8 @@ npongratz.fileserver-linux ensures the fileserver-linux service runs on boot
 Vagrant
 --------
 
-Packer uses Vagrant for post-processing to create the VirtualBox .box
-artifact.
+Packer uses [Vagrant for post-processing](https://packer.io/docs/post-processors/vagrant.html)
+to create the VirtualBox .box artifact.
 
 You can then use Vagrant for easy manipulation of the VM as you bring it up:
 `vagrant up`, `vagrant halt`, `vagrant destroy`, etc.
