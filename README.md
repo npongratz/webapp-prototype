@@ -19,8 +19,6 @@ project's share/ directory.
 Requirements
 -------------
 
-Resources for a VM using 1 vCPU, 512MB vRAM, 20GB thin-provisioned vHDD
-
 Go
 
  * [https://golang.org/dl/]()
@@ -51,6 +49,12 @@ Vagrant
 
  * [https://www.vagrantup.com/downloads.html]()
  * Tested with Vagrant 1.6.5
+
+Local resources for the guest VM:
+
+ * 1 vCPU
+ * 512MB vRAM
+ * 20GB thin-provisioned vHDD
 
 
 Synopsis
