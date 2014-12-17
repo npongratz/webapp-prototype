@@ -189,22 +189,73 @@ Packer downloads the CentOS ISO (CentOS-7.0-1406-x86_64-Minimal.iso) and:
   6. Saves as .box in builds/ directory
 
 
+File uploads
+-------------
+
+The following files and dirs/ are uploaded to the guest VM:
+
+  * share/
+
+    * Directory of static files that will be shared by the HTTP service we're
+      implementing
+
+  * app/bin/fileserver-linux
+
+    * The HTTP service we're implementing
+    * Created with a `go build`, see **Build Go Binary** above for
+      instructions
+
+  * app/fileserver-linux.service
+
+    * systemd unit that starts fileserver-linux upon bootup
+
+These files are initially uploaded to the guest's tmp/ directory, to be moved
+to their ultimate destinations later by scripts executed by Packer.
+
+
+Scripts
+--------
+
+Packer executes the following scripts on the guest VM for provisioning:
+
+  * scripts/ansible.sh
+
+    * Installs ansible on guest
+
+  * scripts/prep-fileserver-linux.sh
+
+    * Creates directories as needed
+    * Moves uploaded files to proper destinations
+    * Sets executable bit of fileserver-linux
+    * Enables fileserver-linux to run at boot
+
+  * scripts/cleanup.sh
+
+    * Zeros out free space on guest VM for more effective compacting of vHDD
+
+
 Ansible
 --------
 
-Our Ansible playbook implements the following roles to provision the VM:
+Our Ansible playbook further provisions the VM by implementing the following
+roles:
 
   * [geerlingguy.nfs](https://github.com/geerlingguy/ansible-role-nfs)
+
+    * Sets up NFS on the VM, presumably for file sharing.
+
   * [geerlingguy.packer-rhel](https://github.com/geerlingguy/ansible-role-packer-rhel)
+
+    * Installs some stuff
+    * Uninstalls other stuff
+    * Fixes some network issues
+    * Cleans up the filesystem
+
   * npongratz.fileserver-linux
 
-geerlingguy.nfs sets up NFS on the VM, presumably for file sharing.
+    * Ensures the fileserver-linux service runs on boot
+    * In theory. Unkown at present whether this is actually working.
 
-geerlingguy.packer-rhel installs some stuff, uninstalls other stuff, fixes
-some network issues, and cleans up the filesystem.
-
-npongratz.fileserver-linux ensures the fileserver-linux service runs on boot
-  * In theory. Unkown at present whether this is actually working.
 
 Vagrant
 --------
