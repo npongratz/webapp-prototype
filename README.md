@@ -56,6 +56,9 @@ Vagrant
 Synopsis
 ---------
 
+    $ git clone https://github.com/npongratz/webapp-prototype.git
+    $ cd webapp-prototype
+
     $ # *Build on Linux host*:
     $ go build -o app/bin/fileserver-linux app/src/main.go
     
