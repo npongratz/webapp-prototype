@@ -183,7 +183,7 @@ Packer downloads the CentOS ISO (CentOS-7.0-1406-x86_64-Minimal.iso) and:
 
   1. Boots it with VirtualBox
   2. Provisions with Kickstart
-  3. Further provisions with file uploads and Ansible
+  3. Further provisions with file uploads, shell scrips, and Ansible
   4. Clears out disk image's empty space for better compacting
   5. Shuts down VM
   6. Saves as .box in builds/ directory
@@ -192,7 +192,7 @@ Packer downloads the CentOS ISO (CentOS-7.0-1406-x86_64-Minimal.iso) and:
 Ansible
 --------
 
-We are using the following roles:
+Our Ansible playbook implements the following roles to provision the VM:
 
   * [geerlingguy.nfs](https://github.com/geerlingguy/ansible-role-nfs)
   * [geerlingguy.packer-rhel](https://github.com/geerlingguy/ansible-role-packer-rhel)
