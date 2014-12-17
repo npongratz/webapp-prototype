@@ -254,7 +254,7 @@ roles:
   * npongratz.fileserver-linux
 
     * Ensures the fileserver-linux service runs on boot
-    * In theory. Unkown at present whether this is actually working.
+    * In theory. Unknown at present whether this is actually working.
 
 
 Vagrant
