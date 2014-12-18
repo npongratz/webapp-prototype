@@ -78,8 +78,7 @@ Synopsis
 ### Artifacts:
 
   * Linux ELF binary: app/bin/fileserver-linux
-  * VirtualBox .box found in builds/ directory, suitable for deployment on
-    any VirtualBox system.
+  * Vagrant .box found in builds/ directory
     * fileserver-linux automatically runs on startup
     * If needed: `ssh -p 2222 vagrant@localhost`
       * Credentials: vagrant / vagrant
@@ -265,7 +264,7 @@ Vagrant
 --------
 
 Packer uses [Vagrant for post-processing](https://packer.io/docs/post-processors/vagrant.html)
-to convert the Packer build to a VirtualBox .box artifact.
+to convert the Packer build to a Vagrant .box artifact.
 
 You can then use Vagrant on your host for easy manipulation of the VM as you
 bring it up: `vagrant up`, `vagrant halt`, `vagrant destroy`, etc.
