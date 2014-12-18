@@ -27,7 +27,7 @@ Go
 gonative
 
  * Required only if host is not Linux
- * Recommend [https://github.com/calmh/gonative]() fork
+ * Recommend [https://github.com/calmh/gonative](calmh's fork of gonative)
  * `go get github.com/calmh/gonative && gonative -version=1.3 -platforms="linux_amd64"`
 
 VirtualBox
@@ -99,7 +99,7 @@ started.
 
 This binary targets Linux (CentOS 7 64-bit). If building the binary on an OS X
 host, we'll first install calmh's fork of gonative to set up the
-cross-compilation system:
+cross-compilation system in go/ of this project's directory:
 
     $ go get github.com/calmh/gonative
     $ gonative -version=1.3 -platforms="linux_amd64"
@@ -307,13 +307,13 @@ Acknowledgements
 [Jeff Geerling on Github](https://github.com/geerlingguy) for an example Packer
 setup for a minimal CentOS 7 Vagrant box provisioned with Ansible:
 
-  * [https://github.com/geerlingguy/packer-centos-7]()
-  * [https://github.com/geerlingguy/ansible-role-packer-rhel]()
-  * [https://github.com/geerlingguy/ansible-role-nfs]()
+  * https://github.com/geerlingguy/packer-centos-7
+  * https://github.com/geerlingguy/ansible-role-packer-rhel
+  * https://github.com/geerlingguy/ansible-role-nfs
  
 [Calvin Cheng on ServerFault](http://serverfault.com/users/93530/calvin-cheng) 
 for a systemd unit that starts the Go webapp on boot:
 
-  * [http://serverfault.com/a/479437]()
+  * http://serverfault.com/a/479437
 
 Most of **Vagrantfile** comes from `vagrant init`.
