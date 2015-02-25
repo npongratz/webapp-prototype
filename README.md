@@ -21,33 +21,33 @@ Requirements
 
 Go
 
- * [https://golang.org/dl/]()
+ * https://golang.org/dl/
  * Tested with go version go1.3.1 darwin/amd64
 
 gonative
 
  * Required only if host is not Linux
- * Recommend [https://github.com/calmh/gonative](calmh's fork of gonative)
+ * Recommend [calmh's fork of gonative](https://github.com/calmh/gonative)
  * `go get github.com/calmh/gonative && gonative -version=1.3 -platforms="linux_amd64"`
 
 VirtualBox
 
- * [https://www.virtualbox.org/wiki/Downloads]()
+ * https://www.virtualbox.org/wiki/Downloads
  * Tested with VirtualBox v4.3.20 r96996
 
 Packer
 
- * [https://packer.io/downloads.html]()
+ * https://packer.io/downloads.html
  * Tested with Packer v0.7.2 on OS X
 
 Ansible
 
- * [http://docs.ansible.com/intro_installation.html]()
+ * http://docs.ansible.com/intro_installation.html
  * Tested with Ansible 1.7.2
 
 Vagrant
 
- * [https://www.vagrantup.com/downloads.html]()
+ * https://www.vagrantup.com/downloads.html
  * Tested with Vagrant 1.6.5
 
 Local resources for the guest VM:
@@ -59,21 +59,23 @@ Local resources for the guest VM:
 
 Synopsis
 ---------
+After installing all prerequisites:
+```bash
+$ git clone https://github.com/npongratz/webapp-prototype.git
+$ cd webapp-prototype
 
-    $ git clone https://github.com/npongratz/webapp-prototype.git
-    $ cd webapp-prototype
-
-    $ # *Build on Linux host*:
-    $ go build -o app/bin/fileserver-linux app/src/main.go
+$ # *Build on Linux host*:
+$ go build -o app/bin/fileserver-linux app/src/main.go
     
-    $ # *Build on OS X, Windows, or any other non-Linux host*:
-    $   # First install gonative (see Build Go Binary below)
-    $   # Then you can target linux/amd64:
-    $ GOOS=linux GOARCH=amd64 go/bin/go build -o app/bin/fileserver-linux app/src/main.go
+$ # *Build on OS X, Windows, or any other non-Linux host*:
+$   # First install gonative (see Build Go Binary below)
+$   # Then you can target linux/amd64:
+$ GOOS=linux GOARCH=amd64 go/bin/go build -o app/bin/fileserver-linux app/src/main.go
     
-    $ packer build Packerfile-centos70-x86_64.json
-    $ vagrant up
-    $ curl localhost:8080/hello.txt
+$ packer build Packerfile-centos70-x86_64.json
+$ vagrant up
+$ curl localhost:8080/hello.txt
+```
 
 ### Artifacts:
 
