@@ -19,33 +19,33 @@ project's share/ directory.
 Requirements
 -------------
 
-Go
+[Go](https://golang.org)
 
  * https://golang.org/dl/
  * Tested with go version go1.3.1 darwin/amd64
 
-gonative
+[gonative](https://github.com/calmh/gonative)
 
  * Required only if host is not Linux
  * Recommend [calmh's fork of gonative](https://github.com/calmh/gonative)
  * `go get github.com/calmh/gonative && gonative -version=1.3 -platforms="linux_amd64"`
 
-VirtualBox
+[VirtualBox](https://www.virtualbox.org)
 
  * https://www.virtualbox.org/wiki/Downloads
  * Tested with VirtualBox v4.3.20 r96996
 
-Packer
+[Packer](https://packer.io)
 
  * https://packer.io/downloads.html
  * Tested with Packer v0.7.2 on OS X
 
-Ansible
+[Ansible](http://docs.ansible.com)
 
  * http://docs.ansible.com/intro_installation.html
  * Tested with Ansible 1.7.2
 
-Vagrant
+[Vagrant](https://www.vagrantup.com)
 
  * https://www.vagrantup.com/downloads.html
  * Tested with Vagrant 1.6.5
